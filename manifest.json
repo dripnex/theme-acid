@@ -1,0 +1,7 @@
+{
+  "id": "theme-acid",
+  "name": "Acid",
+  "version": "0.1.0",
+  "description": "Hacker acid. Toxic lime on near-black.",
+  "main": "dist/index.js"
+}

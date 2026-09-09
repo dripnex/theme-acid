@@ -1,0 +1,59 @@
+/**
+ * Acid — satellite Dripnex theme.
+ * Token layer only. Same contract as a community theme repo.
+ * Must be CommonJS.
+ *
+ * Hacker acid. Toxic lime on near-black.
+ */
+
+const TOKENS = {
+  '--bg-base': '#050805',
+  '--bg-surface': '#0c140c',
+  '--bg-elevated': '#142014',
+  '--bg-inset': '#020402',
+  '--bg-hover': 'rgba(216, 255, 154, 0.06)',
+  '--bg-active': 'rgba(216, 255, 154, 0.1)',
+  '--text-primary': '#d8ff9a',
+  '--text-secondary': 'rgba(216, 255, 154, 0.74)',
+  '--text-muted': 'rgba(216, 255, 154, 0.52)',
+  '--text-faint': 'rgba(216, 255, 154, 0.34)',
+  '--border': 'rgba(216, 255, 154, 0.12)',
+  '--border-subtle': 'rgba(216, 255, 154, 0.07)',
+  '--border-strong': 'rgba(216, 255, 154, 0.18)',
+  '--accent': '#b8ff00',
+  '--accent-hover': '#d0ff4a',
+  '--accent-muted': 'rgba(184, 255, 0, 0.2)',
+  '--accent-subtle': 'rgba(184, 255, 0, 0.1)',
+  '--glass-bg': 'rgba(5, 8, 5, 0.92)',
+  '--glass-border': 'rgba(216, 255, 154, 0.1)',
+  '--glass-bg-menu': 'rgba(20, 32, 20, 0.96)',
+  '--glass-border-menu': 'rgba(216, 255, 154, 0.1)',
+  '--status-active': '#b8ff00',
+  '--status-on-hold': '#e0c040',
+  '--status-completed': '#7dff6a',
+  '--status-dropped': '#ff5a5a',
+};
+
+module.exports = {
+  id: 'theme-acid',
+  name: 'Acid',
+  version: '0.1.0',
+  description: "Hacker acid. Toxic lime on near-black.",
+
+  activate(context) {
+    const remove = context.registerTheme({
+      id: 'dripnex-acid',
+      name: 'Acid',
+      description: "Hacker acid. Toxic lime on near-black.",
+      author: 'Dripnex',
+      colorScheme: 'dark',
+      tokens: TOKENS,
+    });
+
+    return {
+      dispose() {
+        remove();
+      },
+    };
+  },
+};
